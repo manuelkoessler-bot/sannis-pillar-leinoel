@@ -12,10 +12,12 @@ CSS ist unter `.sn-pillar` gekapselt, Header und Footer von sannis.at bleiben un
 |---|---|
 | `SANNIS_PillarPage_Bio-Leinoel_Elementor.html` | Das Widget, komplett kopierbar (ca. 78 KB) |
 | `assets/pillar/` | Alle Bilder, Video und OG-Bild der Seite (32 Referenzen im Code) |
+| `assets/fonts/` | ITC Avant Garde Gothic Pro (Extra Light, Book, Medium, Demi, Bold) als WOFF2, Original, Lizenz SANNIS |
 
 ## Einbau (ca. 30 Minuten)
-1. **Bilder hochladen:** Ordner `assets/pillar/` so auf den Server legen, dass die Dateien unter `https://sannis.at/wp-content/uploads/sannis-brand/pillar/…` erreichbar sind
-   (z. B. per FTP nach `wp-content/uploads/sannis-brand/pillar/`). Anderer Pfad? Dann im Code alle `https://sannis.at/wp-content/uploads/sannis-brand/pillar` ersetzen.
+1. **Bilder und Schriften hochladen:** Ordner `assets/pillar/` so auf den Server legen, dass die Dateien unter `https://sannis.at/wp-content/uploads/sannis-brand/pillar/…` erreichbar sind
+   (z. B. per FTP nach `wp-content/uploads/sannis-brand/pillar/`), die Schriften aus `assets/fonts/` nach `wp-content/uploads/sannis-brand/fonts/`
+   (derselbe Ordner wie bei der Produktseite). Anderer Pfad? Dann im Code alle `https://sannis.at/wp-content/uploads/sannis-brand/pillar` ersetzen.
 2. **Seite anlegen:** WordPress → Seiten → Neu. Typ **Seite** (kein Beitrag), Slug `/leinoel/`, Elementor-Template **Full Width**.
 3. **Widget:** In Elementor EIN HTML-Widget auf die Seite ziehen, den Inhalt der Datei komplett hineinkopieren (Cmd+A/Cmd+V). Nichts weglassen, keine `on…`-Attribute ergänzen.
 4. **Rank Math:** Title „Bio-Leinöl aus Vorarlberg: frisch gepresst in den Alpen | SANNIS“, Meta wie im Kommentar am Dateianfang, OG-Bild aus `assets/pillar/`.
@@ -24,8 +26,8 @@ CSS ist unter `.sn-pillar` gekapselt, Header und Footer von sannis.at bleiben un
 7. **Go-live erst nach Freigabe** (Harald Klüh, Frank Nessler); bis dahin „noindex“ oder Entwurf.
 
 ## Schrift
-Die Seite lädt die Schriften über Google Fonts (Link am Dateianfang). Headlines im Guide = ITC Avant Garde Gothic Pro (Lizenz vorhanden);
-sobald die Webfont-Dateien da sind, Google-Fonts-Link gegen `@font-face` auf die eigenen Dateien tauschen (siehe Style Guide Kap. 03).
+Headlines = **ITC Avant Garde Gothic Pro** (Original, Lizenz SANNIS), als `@font-face` „SANNIS Display“ am Dateianfang eingebunden, Dateien in `assets/fonts/`.
+Fließtext Hanken Grotesk und Labels IBM Plex Mono kommen über Google Fonts (Link am Dateianfang). Nur auf SANNIS-Domains einsetzen, nicht weitergeben.
 
 ## Regeln
 - Firewall-sicher: kein HTML in JS-Strings, keine `on…`-Attribute, keine externen Skripte außer dem Google-Fonts-Link, kein Base64.

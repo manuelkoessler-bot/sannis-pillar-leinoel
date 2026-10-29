@@ -28,14 +28,15 @@
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900&family=Hanken+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>/* SANNIS Display = ITC Avant Garde Gothic Pro (Lizenz SANNIS) */@font-face{font-family:"SANNIS Display";font-style:normal;font-weight:200;font-display:swap;src:local("ITC Avant Garde Gothic Pro Extra Light"),local("ITCAvantGardePro-XLt"),url(assets/fonts/itc/ITCAvantGardePro-XLt.woff2) format("woff2")}@font-face{font-family:"SANNIS Display";font-style:normal;font-weight:400;font-display:swap;src:local("ITC Avant Garde Gothic Pro Book"),local("ITCAvantGardePro-Bk"),url(assets/fonts/itc/ITCAvantGardePro-Bk.woff2) format("woff2")}@font-face{font-family:"SANNIS Display";font-style:normal;font-weight:500;font-display:swap;src:local("ITC Avant Garde Gothic Pro Medium"),local("ITCAvantGardePro-Md"),url(assets/fonts/itc/ITCAvantGardePro-Md.woff2) format("woff2")}@font-face{font-family:"SANNIS Display";font-style:normal;font-weight:600;font-display:swap;src:local("ITC Avant Garde Gothic Pro Demi"),local("ITCAvantGardePro-Demi"),url(assets/fonts/itc/ITCAvantGardePro-Demi.woff2) format("woff2")}@font-face{font-family:"SANNIS Display";font-style:normal;font-weight:700;font-display:swap;src:local("ITC Avant Garde Gothic Pro Bold"),local("ITCAvantGardePro-Bold"),url(assets/fonts/itc/ITCAvantGardePro-Bold.woff2) format("woff2")}</style>
 <style>
 /* Layout: ein großes Statement pro Screen, Farbräume wechseln kapitelweise (Violett / Eisweiß / Schwarz), Verlauf nur in Bildern. Einzige Goldstelle: der Öltropfen. */
 :root{
   --violet:#442769; --violet-2:#4F307A; --ice:#FAFBFF; --ink:#141414; --electric:#9D44DC;
   --hair:#C7C0D2; --lilac:#BFB2CC; --sky:#3699FF; --ultra:#363DD6; --gold:#E9B824; --stone:#8E8B94;
   --bg:var(--ice); --fg:var(--violet);
-  --display:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --display:"SANNIS Display","ITC Avant Garde Gothic Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
   --body:"Hanken Grotesk","Helvetica Neue",Helvetica,Arial,sans-serif;
   --mono:"IBM Plex Mono","SFMono-Regular",Menlo,monospace;
   --ease:cubic-bezier(.2,.7,.1,1);
@@ -57,11 +58,11 @@ h1,h2,h3,p{margin:0}
 .band--ultra{background:linear-gradient(160deg,var(--ultra) 0%,var(--violet) 70%);color:#fff}
 
 /* Typo */
-.display{font-family:var(--display);font-weight:850;font-stretch:118%;text-transform:uppercase;line-height:.9;letter-spacing:-.01em;text-wrap:balance}
+.display{font-family:var(--display);font-weight:700;font-stretch:118%;text-transform:uppercase;line-height:.9;letter-spacing:-.01em;text-wrap:balance}
 .h2{font-size:clamp(40px,6.4vw,96px)}
 .h3{font-family:var(--display);font-weight:700;font-stretch:110%;text-transform:uppercase;font-size:clamp(20px,2vw,26px);line-height:1.05;letter-spacing:.01em}
 .label{font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--electric)}
-.band--violet .label,.band--ink .label,.band--ultra .label{color:#C58CF0}
+.band--violet .label,.band--ink .label,.band--ultra .label{color:#C99BF0}
 .echo{font-family:var(--display);font-weight:300;font-stretch:100%;text-transform:uppercase;letter-spacing:.04em;font-size:clamp(14px,1.6vw,24px);line-height:1.2;opacity:.72}
 .lead{font-size:clamp(19px,1.6vw,22px);line-height:1.5;max-width:34em}
 .prose{max-width:62ch}
@@ -79,7 +80,7 @@ h1,h2,h3,p{margin:0}
 .bleed::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,20,20,0) 45%,rgba(20,20,20,.62) 100%);z-index:1}
 .bleed__text{position:absolute;left:0;right:0;bottom:0;z-index:2;padding-bottom:clamp(32px,5vw,72px);color:#fff}
 .bleed .voices{margin-bottom:0}
-.bleed .voices .label{color:#C58CF0}
+.bleed .voices .label{color:#C99BF0}
 .bleed .voices .echo{color:#fff}
 .bleed .ki{position:absolute;left:var(--gx);top:14px;z-index:2;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.8)}
 @media (max-width:1000px){.tiles{grid-template-columns:repeat(3,minmax(0,1fr))}}
@@ -120,7 +121,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 .fig video{width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0}
 .fig--video{aspect-ratio:3/4;max-height:720px}
 .hero__grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(48px,7vw,110px);align-items:end;padding-block:clamp(48px,7vw,96px) clamp(32px,4vw,56px)}
-.statement{font-family:var(--display);font-weight:850;font-stretch:118%;text-transform:uppercase;line-height:.86;font-size:clamp(56px,9.4vw,140px);letter-spacing:-.015em;display:grid;justify-items:start}
+.statement{font-family:var(--display);font-weight:700;font-stretch:118%;text-transform:uppercase;line-height:.86;font-size:clamp(56px,9.4vw,140px);letter-spacing:-.015em;display:grid;justify-items:start}
 .statement .w{line-height:.86;padding:.12em 0 .06em;margin-top:-.12em;white-space:nowrap}
 .statement .ltr{display:inline-block;transform:translateY(110%);transition:transform .7s var(--ease)}
 .statement .outline{color:transparent;-webkit-text-stroke:clamp(2px,.3vw,4.5px) #fff;paint-order:stroke fill}
@@ -173,7 +174,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 .answer{border-left:2px solid var(--electric);padding:6px 0 6px 22px;font-size:clamp(18px,1.5vw,21px);line-height:1.55;max-width:36em}
 .tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--hair);border:1px solid var(--hair);margin-top:40px}
 .tile{background:var(--ice);padding:26px 22px;display:grid;gap:10px;align-content:start}
-.tile .num{font-family:var(--display);font-weight:850;font-stretch:118%;font-size:40px;line-height:1;color:var(--violet)}
+.tile .num{font-family:var(--display);font-weight:700;font-stretch:118%;font-size:40px;line-height:1;color:var(--violet)}
 .tile p{font-size:15px;line-height:1.5}
 .tile .label{color:var(--stone)}
 
@@ -183,7 +184,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 .lb__cap{position:absolute;left:0;right:0;bottom:0;padding:28px var(--gxr) 28px var(--gx);display:flex;justify-content:space-between;align-items:end;color:#fff;background:linear-gradient(180deg,transparent,rgba(20,20,20,.55))}
 .lb__cap .h3{font-size:clamp(24px,3vw,40px)}
 .lb__title{display:grid;gap:8px}
-.lb__title .label{color:#C58CF0}
+.lb__title .label{color:#C99BF0}
 .lb__ki{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55)}
 .lb--inline{margin:0;border-radius:4px;min-height:260px}
 .lb--inline img{height:100%}
@@ -196,7 +197,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 .steps{display:grid;gap:0;counter-reset:s}
 .step{display:grid;grid-template-columns:72px minmax(0,1fr);gap:18px;padding:26px 0;border-top:1px solid rgba(255,255,255,.22)}
 .step:last-child{border-bottom:1px solid rgba(255,255,255,.22)}
-.step .n{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:#C58CF0;padding-top:6px}
+.step .n{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:#C99BF0;padding-top:6px}
 .step h3{margin-bottom:6px}
 .step p{opacity:.9;max-width:48ch;font-size:16px}
 .media-tall{height:100%;min-height:420px}
@@ -204,13 +205,13 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 /* Omega 3 */
 .otiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:8px}
 .otile{background:var(--violet-2);border:1px solid rgba(255,255,255,.14);padding:26px 22px 22px;display:grid;gap:8px;min-height:190px;align-content:space-between;border-radius:4px}
-.otile .big{font-family:var(--display);font-weight:850;font-stretch:118%;font-size:clamp(40px,4.6vw,64px);line-height:.95;color:#fff;font-variant-numeric:tabular-nums}
+.otile .big{font-family:var(--display);font-weight:700;font-stretch:118%;font-size:clamp(40px,4.6vw,64px);line-height:.95;color:#fff;font-variant-numeric:tabular-nums}
 .otile .big small{font-size:.42em;font-weight:700;letter-spacing:.02em;vertical-align:top;margin-right:.1em}
-.otile .label{color:#C58CF0}
+.otile .label{color:#C99BF0}
 .otile p{font-size:15px;opacity:.9}
 .otile--electric{background:var(--electric);border-color:var(--electric)}
 .otile--badge{background:var(--ink);display:grid;place-items:center}
-.badge{width:132px;height:132px;border-radius:50%;background:var(--ink);border:2px solid rgba(255,255,255,.9);display:grid;place-items:center;text-align:center;font-family:var(--display);font-weight:850;font-stretch:118%;text-transform:uppercase;line-height:.95;color:#fff}
+.badge{width:132px;height:132px;border-radius:50%;background:var(--ink);border:2px solid rgba(255,255,255,.9);display:grid;place-items:center;text-align:center;font-family:var(--display);font-weight:700;font-stretch:118%;text-transform:uppercase;line-height:.95;color:#fff}
 .badge .s{font-size:13px;letter-spacing:.12em;font-weight:700}
 .badge .b{font-size:46px}
 .claim{margin-top:28px;max-width:70ch;font-size:15px;line-height:1.55;opacity:.9}
@@ -260,7 +261,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 /* Herkunft */
 .facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 32px;margin-top:8px}
 .fact{padding:16px 0;border-top:1px solid rgba(250,251,255,.18);display:grid;gap:4px}
-.fact .label{color:#C58CF0}
+.fact .label{color:#C99BF0}
 .fact b{font-weight:500;font-size:17px}
 .fact p{font-size:14.5px;opacity:.8}
 .linkrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
@@ -269,13 +270,13 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 /* Trust */
 .sources{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--hair);border:1px solid var(--hair)}
 .source{background:#fff;padding:24px 22px;display:grid;gap:6px}
-.source .big{font-family:var(--display);font-weight:850;font-stretch:118%;font-size:44px;line-height:1;color:var(--violet);font-variant-numeric:tabular-nums}
+.source .big{font-family:var(--display);font-weight:700;font-stretch:118%;font-size:44px;line-height:1;color:var(--violet);font-variant-numeric:tabular-nums}
 .source p{font-size:14.5px;color:var(--stone)}
 .quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:40px}
 .quote{display:grid;gap:14px;padding-top:18px;border-top:1px solid var(--hair)}
 .quote p{font-size:17px;line-height:1.5}
 .quote .who{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--stone)}
-.quote .smile{width:36px;height:36px;border-radius:50%;background:var(--violet);display:grid;place-items:center;color:#fff;font-family:var(--display);font-weight:850;font-size:18px}
+.quote .smile{width:36px;height:36px;border-radius:50%;background:var(--violet);display:grid;place-items:center;color:#fff;font-family:var(--display);font-weight:700;font-size:18px}
 
 /* Ticker */
 .ticker{margin-top:clamp(40px,5vw,64px);display:grid;gap:10px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
@@ -322,7 +323,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 .stile__img img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;transition:transform .5s var(--ease)}
 .stile:hover .stile__img img{transform:scale(1.04)}
 .stile--all .stile__img img{mix-blend-mode:normal}
-.stile__tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#C58CF0}
+.stile__tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#C99BF0}
 .stile b{font-weight:500;font-size:16px;color:#fff}
 .stile>span:last-child{font-size:13.5px;color:var(--lilac)}
 
@@ -335,7 +336,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 .pcard .status{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--electric)}
 .pcard--now{background:var(--violet);color:#fff;border-color:var(--violet)}
 .pcard--now p{color:var(--lilac)}
-.pcard--now .status{color:#C58CF0}
+.pcard--now .status{color:#C99BF0}
 .bloglist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px;margin-top:40px}
 .blog{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center;padding:16px 0;border-top:1px solid var(--hair);text-decoration:none;font-size:16px}
 .blog:hover b{color:var(--electric)}
@@ -346,7 +347,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 .close{background:var(--violet);color:#fff;padding-block:clamp(64px,8vw,110px)}
 .close .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:end}
 .close .sig{font-family:var(--display);font-weight:300;font-stretch:100%;font-size:clamp(34px,5vw,64px);line-height:1.05;letter-spacing:-.01em}
-.close .sig b{font-weight:850;font-stretch:118%;display:block}
+.close .sig b{font-weight:700;font-stretch:118%;display:block}
 .close__sig{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
 .close .frank{width:140px;height:140px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,.3);flex:none}
 .footer-note{background:var(--ink);color:var(--lilac);font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:22px var(--gxr) 22px var(--gx);text-align:center;border-top:1px solid rgba(250,251,255,.15)}
@@ -662,7 +663,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 <!-- ♥ Love Break 3 -->
 <figure class="lb lb--split" aria-label="Love Break: SANNIS Sunday Tour">
   <img src="assets/web/lb_bus.webp" alt="Violetter SANNIS Bus auf Tour" loading="lazy">
-  <figcaption class="lb__text"><span class="label" style="color:#C58CF0">Love Break</span><span class="display" style="font-size:clamp(36px,5vw,72px)">SANNIS. Bei uns unterwegs.</span></figcaption>
+  <figcaption class="lb__text"><span class="label" style="color:#C99BF0">Love Break</span><span class="display" style="font-size:clamp(36px,5vw,72px)">SANNIS. Bei uns unterwegs.</span></figcaption>
 </figure>
 
 <!-- ===== I · TRUST ===== -->
@@ -820,7 +821,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
   <div class="wrap">
     <div class="close__sig rv">
       <img class="frank" src="assets/web/frank-portrait.webp" alt="Frank Nessler, Gründer von SANNIS, lacht in die Kamera" loading="lazy" width="480" height="480">
-      <div><p class="sig">Ein Lächeln,<b>Frank</b></p><span class="label" style="color:#C58CF0;display:block;margin-top:10px">Frank Nessler · Gründer, Wald am Arlberg</span></div>
+      <div><p class="sig">Ein Lächeln,<b>Frank</b></p><span class="label" style="color:#C99BF0;display:block;margin-top:10px">Frank Nessler · Gründer, Wald am Arlberg</span></div>
     </div>
   </div>
 </section>
