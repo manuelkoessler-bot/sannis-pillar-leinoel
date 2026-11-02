@@ -1,6 +1,6 @@
 # SANNIS Pillar Page Bio-Leinöl · Einbau (Vorlage für Themenseiten)
 
-Stand 29.10.2026 · Quelle: SANNIS Style Guide 2026, Kapitel 15 „Vorlage Pillar Page“. Ansprechpartner: Manuel Kössler (SANNIS Marketing).
+Stand 02.11.2026 · Quelle: SANNIS Style Guide 2026, Kapitel 15 „Vorlage Pillar Page“. Ansprechpartner: Manuel Kössler (SANNIS Marketing).
 
 ## Was das ist
 Die komplette Pillar Page „Bio-Leinöl“ (Prototyp v1.9) als **ein Elementor-HTML-Widget**: Markup, CSS und Skript in einer Datei.
