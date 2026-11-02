@@ -11,7 +11,7 @@ CSS ist unter `.sn-pillar` gekapselt, Header und Footer von sannis.at bleiben un
 | Datei | Zweck |
 |---|---|
 | `SANNIS_PillarPage_Bio-Leinoel_Elementor.html` | Das Widget, komplett kopierbar (ca. 78 KB) |
-| `assets/pillar/` | Alle Bilder, Video und OG-Bild der Seite (32 Referenzen im Code) |
+| `assets/pillar/` | Alle Bilder, Video und OG-Bild der Seite (33 Referenzen im Code) |
 | `assets/fonts/` | ITC Avant Garde Gothic Pro (Extra Light, Book, Medium, Demi, Bold) als WOFF2, Original, Lizenz SANNIS |
 
 ## Einbau (ca. 30 Minuten)
